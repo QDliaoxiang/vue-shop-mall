@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: .6rem;
+    height: .8rem;
     padding: 0 .1rem;
     background: #f63515;
     .iconsousuo

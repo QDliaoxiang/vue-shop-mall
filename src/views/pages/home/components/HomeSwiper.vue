@@ -58,7 +58,6 @@ export default {
 
     .img-item {
       width: 100%;
-      height: 100%;
     }
   }
 }
