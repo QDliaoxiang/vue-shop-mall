@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "vue-shop-mall",
   "version": "1.0.0",
   "description": "y",
   "author": "QDliaoxiang <2668812066@qq.com>",
@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
