@@ -1,0 +1,79 @@
+{
+  "id": "1352065",
+  "name": "Travel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "Travel 项目图标",
+  "glyphs": [
+    {
+      "icon_id": "4372610",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "9765462",
+      "name": "竖线 (8)",
+      "font_class": "shuxian",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "974894",
+      "name": "推荐",
+      "font_class": "tuijian",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "1022587",
+      "name": "位置",
+      "font_class": "weizhi-copy",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4133760",
+      "name": "时间 历史记录 计时 钟表 面性",
+      "font_class": "shijianlishijilujishizhongbiaomianxing",
+      "unicode": "e896",
+      "unicode_decimal": 59542
+    },
+    {
+      "icon_id": "5849782",
+      "name": "右箭头",
+      "font_class": "iconfontyoujiantou-copy-copy-copy-copy",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "9709980",
+      "name": "图片",
+      "font_class": "image",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "2569779",
+      "name": "箭头 (下)",
+      "font_class": "jiantouxia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2674472",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "2675116",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}
