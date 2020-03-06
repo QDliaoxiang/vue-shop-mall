@@ -18,12 +18,12 @@
     align-items: center;
     height: .6rem;
     padding: 0 .1rem;
-    background: #c70f26;
+    background: #f63515;
     .iconsousuo
       padding-right: .1rem;
       color: #fff;
     .wrap
-      flex: 1
+      flex: 1;
       border-radius: .05rem;
       border: 1px solid #ccc;
     .iconweizhi-copy
