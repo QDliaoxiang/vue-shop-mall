@@ -25,7 +25,6 @@ export default {
     color: #666;
   .show
     width: 100%;
-    height: 1rem;
     .ban-img
       width: 100%;
       

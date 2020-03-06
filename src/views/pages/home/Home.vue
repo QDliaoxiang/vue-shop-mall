@@ -4,6 +4,7 @@
     <home-swiper></home-swiper>
     <home-icons></home-icons>
     <public-banner :bannerSrc="bans[0]"></public-banner>
+    <home-hot></home-hot>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HomeHeader from "./components/HomeHeader";
 import HomeSwiper from "./components/HomeSwiper";
 import HomeIcons from "./components/HomeIcons"
 import PublicBanner from "../../../components/PublicBanner"
+import HomeHot from "../../../components/HomeHot"
 export default {
   name: 'Home',
   components: {
@@ -19,6 +21,7 @@ export default {
     HomeSwiper,
     HomeIcons,
     PublicBanner,
+    HomeHot,
   },
   data () {
     return {
