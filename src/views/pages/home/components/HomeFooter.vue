@@ -17,7 +17,7 @@
 .footer
   width:100%;
   height: 2.5rem;
-  padding-top: .5rem;
+  padding: .5rem 0;
   background: #f6f6f6;
   text-align:center;
   color: #bdbdbd;

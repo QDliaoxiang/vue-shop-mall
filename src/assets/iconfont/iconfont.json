@@ -6,6 +6,83 @@
   "description": "Travel 项目图标",
   "glyphs": [
     {
+      "icon_id": "712226",
+      "name": "收货",
+      "font_class": "icon-receive",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "879161",
+      "name": "菜单",
+      "font_class": "ego-menu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "3457187",
+      "name": "返利",
+      "font_class": "fanli",
+      "unicode": "e715",
+      "unicode_decimal": 59157
+    },
+    {
+      "icon_id": "5390971",
+      "name": "退换货",
+      "font_class": "tuihuanhuo",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
+      "icon_id": "5725895",
+      "name": "智能农场",
+      "font_class": "germination",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6241505",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "8084184",
+      "name": "会员",
+      "font_class": "huiyuan",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "11463938",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11520979",
+      "name": "代付款",
+      "font_class": "daifukuan",
+      "unicode": "e76f",
+      "unicode_decimal": 59247
+    },
+    {
+      "icon_id": "12025957",
+      "name": "待评价",
+      "font_class": "daipingjia",
+      "unicode": "e7a3",
+      "unicode_decimal": 59299
+    },
+    {
+      "icon_id": "13160283",
+      "name": "优惠券",
+      "font_class": "youhuiquan",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
       "icon_id": "856960",
       "name": "√",
       "font_class": "ok",

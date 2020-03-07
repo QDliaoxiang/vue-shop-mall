@@ -6,10 +6,9 @@
     <public-banner :bannerSrc="bans[0]"></public-banner>
     <home-hot></home-hot>
     <div class="list-wrap">
-      <home-product v-for="(item,index) in 6" :key="index"></home-product>
+      <home-product v-for="(item,index) in 10" :key="index"></home-product>
     </div>
     <home-footer></home-footer>
-    <tablebar></tablebar>
   </div>
 </template>
 
@@ -21,7 +20,7 @@ import PublicBanner from "../../../components/PublicBanner";
 import HomeHot from "../../../components/HomeHot";
 import HomeProduct from "../../../components/HomeProduct";
 import HomeFooter from "./components/HomeFooter";
-import Tablebar from "../tablebar/Tablebar";
+
 export default {
   name: 'Home',
   components: {
@@ -32,7 +31,6 @@ export default {
     HomeHot,
     HomeProduct,
     HomeFooter,
-    Tablebar,
   },
   data () {
     return {

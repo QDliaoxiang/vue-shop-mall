@@ -1,7 +1,7 @@
 <template>
   <div class="tablebar border-top"> 
     <ul class="item-wrap">
-      <li class="item">
+      <li class="item" @click="handleRoute('/')">
         <div>
           <i class="iconfont icondianpu"></i>
         </div>
@@ -19,7 +19,7 @@
         </div>
         <span>购物车</span>
       </li>
-      <li class="item">
+      <li class="item" @click="handleRoute('/personal')">
         <div>
           <i class="iconfont icongerenzhongxin"></i>
         </div>
@@ -32,6 +32,11 @@
 <script>
 export default {
   name: 'Tablebar',
+  methods: {
+    handleRoute (path) {
+      this.$router.push(path)
+    }
+  }
 }
 </script>
 
