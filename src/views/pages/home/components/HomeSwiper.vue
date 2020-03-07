@@ -52,7 +52,7 @@ export default {
   width: 100%;
   height: 0;
   padding-bottom: 38%;
-
+  margin-top: .8rem;
   .swiper-item {
     height: 2.5rem;
 

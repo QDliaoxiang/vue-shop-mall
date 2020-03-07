@@ -6,6 +6,48 @@
   "description": "Travel 项目图标",
   "glyphs": [
     {
+      "icon_id": "856960",
+      "name": "√",
+      "font_class": "ok",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5767993",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "1306",
+      "name": "购物车空",
+      "font_class": "gouwuchekong",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "657316",
+      "name": "分期－联系客服",
+      "font_class": "lianxikefu",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "11520918",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e767",
+      "unicode_decimal": 59239
+    },
+    {
+      "icon_id": "12435114",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    },
+    {
       "icon_id": "4372610",
       "name": "星星",
       "font_class": "xingxing",
