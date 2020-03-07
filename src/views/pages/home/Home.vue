@@ -9,6 +9,7 @@
       <home-product v-for="(item,index) in 6" :key="index"></home-product>
 
     </div>
+    <home-footer></home-footer>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import HomeIcons from "./components/HomeIcons";
 import PublicBanner from "../../../components/PublicBanner";
 import HomeHot from "../../../components/HomeHot";
 import HomeProduct from "../../../components/HomeProduct";
+import HomeFooter from "./components/HomeFooter";
 export default {
   name: 'Home',
   components: {
@@ -28,6 +30,7 @@ export default {
     PublicBanner,
     HomeHot,
     HomeProduct,
+    HomeFooter,
   },
   data () {
     return {
