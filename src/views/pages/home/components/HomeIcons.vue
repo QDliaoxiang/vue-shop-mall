@@ -69,9 +69,9 @@ export default {
     flex-wrap: wrap;
     .icon-item
       overflow: hidden
-      width: 22%;
+      width: 21%;
       height: 0;
-      padding-bottom: 22%;
+      padding-bottom: 21%;
       text-align: center;
       color: #666;
       img 

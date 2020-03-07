@@ -5,15 +5,20 @@
     <home-icons></home-icons>
     <public-banner :bannerSrc="bans[0]"></public-banner>
     <home-hot></home-hot>
+    <div class="list-wrap">
+      <home-product v-for="(item,index) in 6" :key="index"></home-product>
+
+    </div>
   </div>
 </template>
 
 <script>
 import HomeHeader from "./components/HomeHeader";
 import HomeSwiper from "./components/HomeSwiper";
-import HomeIcons from "./components/HomeIcons"
-import PublicBanner from "../../../components/PublicBanner"
-import HomeHot from "../../../components/HomeHot"
+import HomeIcons from "./components/HomeIcons";
+import PublicBanner from "../../../components/PublicBanner";
+import HomeHot from "../../../components/HomeHot";
+import HomeProduct from "../../../components/HomeProduct";
 export default {
   name: 'Home',
   components: {
@@ -22,6 +27,7 @@ export default {
     HomeIcons,
     PublicBanner,
     HomeHot,
+    HomeProduct,
   },
   data () {
     return {
@@ -40,5 +46,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+  .list-wrap
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: .1rem;
+    background: #f0f2f5;
 </style>
