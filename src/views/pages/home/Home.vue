@@ -6,7 +6,7 @@
     <public-banner :bannerSrc="bans[0]"></public-banner>
     <home-hot></home-hot>
     <div class="list-wrap">
-      <home-product v-for="(item,index) in 10" :key="index"></home-product>
+      <home-product v-for="(item,index) in 10" :key="index" @click.native="handleShowDetail(item)"></home-product>
     </div>
     <home-footer></home-footer>
   </div>
@@ -43,6 +43,12 @@ export default {
           img: '//gw.alicdn.com/imgextra/i2/99/O1CN01rM3hU51CbNnUE5rLP_!!99-0-lubanu.jpg'
         }
       ]
+    }
+  },
+  methods: {
+    handleShowDetail (item) {
+      this.$router.push('/detail')
+      console.log(item)
     }
   }
 }
