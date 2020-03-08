@@ -19,10 +19,15 @@ export default {
 
 <style lang="stylus" scoped>
   .header
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     display: flex;
+    background:#fff;
     justify-content: space-between;
     align-items: center;
-    padding: 0 .2rem;
+    width:100%;
     height: 1rem;
     .title 
       font-size: .4rem;
@@ -30,6 +35,7 @@ export default {
       font-size: .4rem;
       font-weight: bold;
     .more .iconfont
+      padding-right: .2rem;
       font-size: .4rem;
       font-weight: bold;
 </style>
