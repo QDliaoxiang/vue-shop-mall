@@ -83,7 +83,6 @@ export default {
       color: #999;
   .category
     padding: 0.2rem 0;
-    height: 7rem;
     .wrap span 
       display: inline-block;
       padding:.15rem;

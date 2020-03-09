@@ -1,5 +1,5 @@
 <template>
-   <swiper class="swiper-wrap border-bottom" :options="swiperOption" ref="mySwiper">
+   <swiper class="swiper-wrap border-bottom" style="margin-top:1rem;" :options="swiperOption" ref="mySwiper">
     <!-- slides -->
     <swiper-slide class="swiper-item" v-for="item of list" :key="item.id">
       <img class="img-item" :src="item.imgSrc"/>
