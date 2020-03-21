@@ -1,6 +1,6 @@
 <template>
   <div class="tablebar border-top"> 
-    <ul class="item-wrap">
+    <ul v-show="!detailBar" class="item-wrap">
       <li class="item" @click="handleRoute('/')">
         <div>
           <i class="iconfont icondianpu"></i>
@@ -26,15 +26,39 @@
         <span>我的</span>
       </li>
     </ul>
+    <div v-show="detailBar">
+      <h2>加入购物车</h2>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Tablebar',
+  data() {
+    return {
+      detailBar: false
+    }
+  },
   methods: {
-    handleRoute (path) {
+    handleRoute(path) {
       this.$router.push(path)
+    }
+  },
+  computed: {
+    pageRoute() {
+      return this.$route.path
+    }
+  },
+  watch: {
+    //监听是否在商品详情页改变tablebar内容
+    pageRoute(newRoute) {
+      if(newRoute == '/detail') {
+        this.detailBar = true
+      }else{
+        this.detailBar = false;
+      }
+      console.log(this.detailBar)
     }
   }
 }
