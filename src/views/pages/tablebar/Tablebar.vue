@@ -26,8 +26,8 @@
         <span>我的</span>
       </li>
     </ul>
-    <div v-show="detailBar">
-      <h2>加入购物车</h2>
+    <div v-show="detailBar" class="cart">
+      <div class="addto">加入购物车</div>
     </div>
   </div>
 </template>
@@ -60,6 +60,11 @@ export default {
       }
       console.log(this.detailBar)
     }
+  },
+  mounted() {
+    if(this.$route.path == '/detail') {
+      this.detailBar = true
+    }
   }
 }
 </script>
@@ -87,4 +92,17 @@ export default {
       span 
         display: inline-block;
         padding-top: .1rem;
+  .cart 
+    height: .7rem;
+    padding: .1rem 0;
+    text-align: center;
+    .addto
+      display: inline-block;
+      width: 90%;
+      height: .7rem;
+      line-height: .7rem;
+      background: #ff3c3c;
+      border-radius: .16rem;
+      font-size: .34rem;
+      color: #fff;
 </style>
