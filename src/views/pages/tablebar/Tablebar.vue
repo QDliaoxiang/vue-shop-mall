@@ -13,7 +13,7 @@
         </div>
         <span>分类</span>
       </li>
-      <li class="item">
+      <li class="item" @click="handleRoute('/shopcart')">
         <div>
           <i class="iconfont icongouwuchekong"></i>
         </div>
