@@ -42,7 +42,7 @@ export default {
   .check{
     height: .6rem;
     input{
-      zoom:180%
+      zoom:150%
     }
   }
   .img{

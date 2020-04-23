@@ -1,6 +1,6 @@
 <template>
   <div class="tablebar border-top"> 
-    <ul v-show="!detailBar" class="item-wrap">
+    <ul v-show="showTableBar" class="item-wrap">
       <li class="item" @click="handleRoute('/')">
         <div>
           <i class="iconfont icondianpu"></i>
@@ -26,39 +26,53 @@
         <span>我的</span>
       </li>
     </ul>
-    <div v-show="detailBar" class="cart">
+    <div v-show="pageRoute==='/detail'" class="cart">
       <div class="addto">加入购物车</div>
     </div>
+    <computed v-show="pageRoute==='/shopcart'"></computed>
   </div>
 </template>
 
 <script>
+import Computed from "../shopCart/components/Computed"
 export default {
   name: 'Tablebar',
+  components: {
+    Computed
+  },
   data() {
     return {
-      detailBar: false
     }
   },
   methods: {
     handleRoute(path) {
+      //重复点击啥也不做
+      if(path === this.pageRoute){
+        return
+      }
       this.$router.push(path)
     }
   },
   computed: {
+    //存储当前路由
     pageRoute() {
       return this.$route.path
+    },
+    //判断显示tablebar的情况
+    showTableBar() {
+      let path = this.pageRoute
+      if(path === '/' || path === '/personal'){
+        return true
+      }else{
+        return false
+      }
     }
   },
   watch: {
     //监听是否在商品详情页改变tablebar内容
     pageRoute(newRoute) {
-      if(newRoute == '/detail') {
-        this.detailBar = true
-      }else{
-        this.detailBar = false;
-      }
-      console.log(this.detailBar)
+      console.log(newRoute)
+     
     }
   },
   mounted() {
