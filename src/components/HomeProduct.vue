@@ -1,10 +1,10 @@
 <template>
   <div class="product">
     <div class="img-wrap">
-      <img src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/90884/24/9777/120253/5e1449fcEf11bccfd/465b47f2431248d0.jpg!q70.dpg.webp" alt="">
+      <img :src="product.imgUrl" alt="图片">
     </div>
-    <span class="title"> 手电筒可充电 强光远射超亮LED多功能家用户外学生小型便携防水COB照明工作灯 USB手机充电宝 USB直充 可供手机充电 远射强光套装                             </span>
-    <p>$89.9
+    <span class="title">{{product.title}}</span>
+    <p>{{product.price}}
       <span>找相似</span>
     </p>
   </div>
@@ -13,13 +13,18 @@
 <script>
 export default {
   name: 'HomeProduct',
-  
+  props: {
+    product: {
+      isrequire: true,
+      type: Object
+    }
+  },
   data () {
     return {
 
     }
      
-  }
+  },
 }
 </script>
 
@@ -31,8 +36,9 @@ export default {
     margin-bottom: .2rem;
     .img-wrap
       overflow: hidden;
-      width: 100%;
+      width: 90%;
       height: 0;
+      margin: auto;
       padding-bottom: 3rem;
       img 
         width: 100%;

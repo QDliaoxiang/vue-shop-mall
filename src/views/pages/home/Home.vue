@@ -6,7 +6,7 @@
     <public-banner :bannerSrc="bans[0]"></public-banner>
     <home-hot></home-hot>
     <div class="list-wrap">
-      <home-product v-for="(item,index) in 10" :key="index" @click.native="handleShowDetail(item)"></home-product>
+      <home-product v-for="item in homeList" :key="item.id" :product="item" @click.native="handleShowDetail(item)"></home-product>
     </div>
     <home-footer></home-footer>
   </div>
@@ -42,14 +42,25 @@ export default {
         {
           img: '//gw.alicdn.com/imgextra/i2/99/O1CN01rM3hU51CbNnUE5rLP_!!99-0-lubanu.jpg'
         }
-      ]
+      ],
+      homeList: []
     }
   },
   methods: {
     handleShowDetail (item) {
-      this.$router.push('/detail')
-      console.log(item)
+      this.$router.push({name:'ProductDetail',params:{item}})
+    
+    },
+    //获取商品
+    handleGetList() {
+      this.$axios.get('http://47.102.223.148:3001/home/list').then(res => {
+        this.homeList = res.data.data.list
+        
+      })
     }
+  },
+  created() {
+    this.handleGetList()
   }
 }
 </script>

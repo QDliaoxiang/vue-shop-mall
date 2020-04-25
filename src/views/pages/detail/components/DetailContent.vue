@@ -1,17 +1,17 @@
 <template>
   <div class="content">
     <span class="mark">自营</span>
-    <span class="description">戴尔DELL灵越5000 14英寸远程办公英特尔酷睿i5高性能轻薄笔记本电脑(十代i5-1035G1 8G 512G MX230 2G)银</span>
+    <span class="description">{{items.title}}</span>
     <p>
-      <span class="price">￥899</span>
+      <span class="price">￥{{items.price}}</span>
       <span class="news">降价通知</span>
     </p>
     <div class="category">
       <div class="wrap">
         <h3 class="htitle">颜色分类</h3>
-         <span @click="handlePick" v-for="item in list" :key="item.id" ref="cate_item">{{item.title}}</span>
+         <span @click="handlePick" v-for="one in items.category" :key="one.id" ref="cate_item">{{one}}</span>
       </div>
-      <h3 class="htitle">已选<span class="checked">{{item}}</span></h3>
+      <h3 class="htitle">已选<span class="checked">{{checked}}</span></h3>
     </div>
   </div>
 </template>
@@ -19,27 +19,11 @@
 
 export default {
   name: "DetailContent",
+  props: ["item"],
   data () {
     return {
-     item: '',
-     list: [
-       {
-         id: '012',
-         title: '香槟金'
-       },
-       {
-         id: '052',
-         title: '十代酷睿 512SSD+独显 银色'
-       },
-       {
-         id: '072',
-         title: '初音绿'
-       },
-       {
-         id: '0128',
-         title: '曜石黑'
-       }
-     ]
+      items: this.item,
+      checked: '',
     }
   },
   methods: {
@@ -48,7 +32,7 @@ export default {
       for(let i = 0; i < this.$refs.cate_item.length; i++) {
         if($event.target === this.$refs.cate_item[i]) {
           this.$refs.cate_item[i].classList.add('borderSty');
-          this.item = this.$refs.cate_item[i].innerText;
+          this.checked = this.$refs.cate_item[i].innerText;
         }else{
           this.$refs.cate_item[i].classList.remove('borderSty')
         }

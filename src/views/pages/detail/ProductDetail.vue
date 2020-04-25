@@ -1,8 +1,8 @@
 <template>
   <div>
     <detail-header></detail-header>
-    <detail-swiper></detail-swiper>
-    <detail-content></detail-content>
+    <detail-swiper :bannerList="item.banner"></detail-swiper>
+    <detail-content :item="item"></detail-content>
     <detail-img></detail-img>
   </div>
 </template>
@@ -20,6 +20,15 @@ export default {
     DetailSwiper,
     DetailContent,
     DetailImg,
+  },
+  data() {
+    return {
+      item: {}
+    }
+  },
+  created() {
+    this.item = this.$route.params.item
+    
   }
 }
 </script>

@@ -71,8 +71,7 @@ export default {
   watch: {
     //监听是否在商品详情页改变tablebar内容
     pageRoute(newRoute) {
-      console.log(newRoute)
-     
+  
     }
   },
   mounted() {
