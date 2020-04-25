@@ -3,7 +3,7 @@
     <detail-header></detail-header>
     <detail-swiper :bannerList="item.banner"></detail-swiper>
     <detail-content :item="item"></detail-content>
-    <detail-img></detail-img>
+    <detail-img :detailImg="item.banner"></detail-img>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   },
   created() {
     this.item = this.$route.params.item
-    
+    this.$store.commit("handleLooking",this.item)
   }
 }
 </script>

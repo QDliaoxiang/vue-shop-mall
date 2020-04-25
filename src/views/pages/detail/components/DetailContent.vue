@@ -37,6 +37,7 @@ export default {
           this.$refs.cate_item[i].classList.remove('borderSty')
         }
       }
+      this.$store.commit('handleChecked',this.checked)
 
     }
   },

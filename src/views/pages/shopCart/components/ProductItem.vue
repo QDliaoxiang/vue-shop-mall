@@ -7,8 +7,8 @@
       <img :src="item.imgUrl" alt="">
     </div>
     <div class="text">
-      <span>{{item.desc}}</span>
-      <p class="type">{{item.type}}</p>
+      <span>{{item.title}}</span>
+      <p class="type">{{item.checked}}</p>
       <p class="price">￥{{item.price}}</p>
     </div>
   </div>
@@ -37,7 +37,6 @@ export default {
   justify-content: space-around;
   align-items: center;
   height: 2.3rem;
-  margin-top: 1rem;
 
   .check{
     height: .6rem;

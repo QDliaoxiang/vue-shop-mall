@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="wrap">
     <cart-header></cart-header>
-    <product-item :item="goods"></product-item>
+    <product-item v-for="item in cartList" :item="item" :key="item.id"></product-item>
   </div>
 </template>
 <script>
@@ -20,11 +20,13 @@ export default {
         price: 79.9,
         desc: "   蓝月亮洗衣液12斤套装：亮白增艳薰衣草3kg瓶+1kg袋*3  ",
         type: "套装12斤"
-      }
+      },
+      cartList: this.$store.state.shopcart
     }
   }
 }
 </script>
 <style lang="stylus" scoped>
-
+.wrap
+  padding-top: 1rem;
 </style>

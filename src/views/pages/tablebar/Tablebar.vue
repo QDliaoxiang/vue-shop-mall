@@ -27,7 +27,7 @@
       </li>
     </ul>
     <div v-show="pageRoute==='/detail'" class="cart">
-      <div class="addto">加入购物车</div>
+      <div class="addto" @click="handleAdd">加入购物车</div>
     </div>
     <computed v-show="pageRoute==='/shopcart'"></computed>
   </div>
@@ -51,6 +51,10 @@ export default {
         return
       }
       this.$router.push(path)
+    },
+    //将当前正在查看的商品加入购物车
+    handleAdd() {
+      this.$store.commit("handleAddProdct")
     }
   },
   computed: {

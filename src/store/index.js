@@ -10,11 +10,21 @@ export default new Vuex.Store({
   mutations: {
     //向购物车中添加商品
     handleAddProdct(state) {
-      console.log(state)
+      let bool = Object.keys(state.looking)
+      if(bool.length > 0){
+        state.shopcart.push(state.looking)
+      }
+    },
+    handleChecked(state,checked) {
+      state.looking.checked = checked
     },
     //从购物车中删除商品
     handleDeleteProduct(state) {
 
+    },
+    //保存正在查看的商品
+    handleLooking(state, item) {
+      state.looking = item
     }
   }
 })
