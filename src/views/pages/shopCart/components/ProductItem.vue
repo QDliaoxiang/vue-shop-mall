@@ -7,9 +7,9 @@
       <img :src="item.imgUrl" alt="">
     </div>
     <div class="text">
-      <span>{{item.title}}</span>
+      <span class="title">{{item.title}}</span>
       <p class="type">{{item.checked}}</p>
-      <p class="price">￥{{item.price}}</p>
+      <span class="price">￥{{item.price}}</span>
     </div>
   </div>
 </template>
@@ -53,15 +53,21 @@ export default {
   .text{
     width: 60%;
     height: 80%;
-    span{
+    span.title{
       font-size: .3rem;
       line-height: .36rem;
+      overflow: hidden;             /* 隐藏溢出部分 */
+      text-overflow: ellipsis;      /* 显示省略符号来代表被隐藏的文本 */
+      display: -webkit-box;         /* 将对象作为弹性伸缩盒子模型显示 */
+      -webkit-box-orient: vertical; /* 设置盒子内排列顺序为纵向 */
+      -webkit-line-clamp: 2;        /* 限制块元素显示的文本的行数 */
     }
     p.type{
       padding-top: .2rem;
     }
-    p.price{
-      padding-top: .3rem;
+    span.price{
+      display: inline-block;
+      padding-top: .1rem;
       font-size: .4rem;
       color: #f60;
     }

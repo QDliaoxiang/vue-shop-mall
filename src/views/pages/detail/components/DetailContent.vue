@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       items: this.item,
-      checked: '',
+      checked: this.item.category[0],//默认选择第一款
     }
   },
   methods: {
@@ -38,9 +38,11 @@ export default {
         }
       }
       this.$store.commit('handleChecked',this.checked)
-
     }
   },
+  mounted() {
+    this.$store.commit('handleChecked',this.checked)//不选择款式默认选择第一款
+  }
 };
 </script>
 

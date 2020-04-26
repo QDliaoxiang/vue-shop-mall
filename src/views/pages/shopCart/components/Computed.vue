@@ -2,7 +2,7 @@
   <div class="wrap">
     <input type="checkbox" @change="handleChange">
     <div class="total">
-      ￥132.5
+      ￥{{totalPrice}}
       <span class="freight">(不含运费)</span>
     </div>
     <div class="settle">去结算</div>
@@ -11,6 +11,7 @@
 <script>
 export default {
   name: 'Computed',
+  props: ["shopCart"],
   data() {
     return {
     }
@@ -19,7 +20,16 @@ export default {
     handleChange(e) {
       console.log(e.target.checked)
     }
-  }
+  },
+  computed: {
+    totalPrice() {
+      let total = 0
+      this.shopCart.map((item) => {
+        total += (+item.price)
+      })
+      return total
+    }
+  },
 }
 </script>
 

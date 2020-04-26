@@ -13,6 +13,7 @@ export default new Vuex.Store({
       let bool = Object.keys(state.looking)
       if(bool.length > 0){
         state.shopcart.push(state.looking)
+        alert("已加入购物车")
       }
     },
     handleChecked(state,checked) {
