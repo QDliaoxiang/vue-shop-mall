@@ -2,7 +2,7 @@
   <div class="wrap">
     <input type="checkbox" @change="handleChange">
     <div class="total">
-      ￥{{totalPrice}}
+      ￥{{total}}
       <span class="freight">(不含运费)</span>
     </div>
     <div class="settle">去结算</div>
@@ -11,9 +11,10 @@
 <script>
 export default {
   name: 'Computed',
-  props: ["shopCart"],
   data() {
     return {
+      totalPrices: this.$store.state.totalPrice,
+      total: 0
     }
   },
   methods: {
@@ -22,14 +23,17 @@ export default {
     }
   },
   computed: {
-    totalPrice() {
-      let total = 0
-      this.shopCart.map((item) => {
-        total += (+item.price)
-      })
-      return total
-    }
+  
   },
+  watch: {
+    totalPrices(arr) {
+      let total = 0
+      this.$store.state.totalPrice.forEach( (item) => {
+          total += +item.price
+      })
+      this.total = total
+    }
+  }
 }
 </script>
 

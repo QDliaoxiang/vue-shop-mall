@@ -1,7 +1,7 @@
 <template>
   <div class="item border-bottom">
     <div class="check">
-      <input type="checkbox" />
+      <input type="checkbox" @change="handleClickChange"/>
     </div>
     <div class="img">
       <img :src="item.imgUrl" alt="">
@@ -27,6 +27,21 @@ export default {
     return {
 
     }
+  },
+  methods: {
+    //将够选中商品的价格推到store数组
+    handleClickChange(e) {
+      let data = this.item
+      if(e.target.checked === true) {
+        this.$store.commit("handleChangeTotalPrice", data)
+      }else{
+        this.$store.commit("handleChangeTotalPrice", data.id)
+      }
+    }
+  },
+  beforeDestroy() {
+    //离开购物车取消勾选
+    this.$store.commit("handleChangeTotalPrice", this.item.id)
   }
 }
 </script>

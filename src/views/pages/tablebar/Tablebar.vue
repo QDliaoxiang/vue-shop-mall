@@ -29,7 +29,7 @@
     <div v-show="pageRoute==='/detail'" class="cart">
       <div class="addto" @click="handleAdd">加入购物车</div>
     </div>
-    <computed v-show="pageRoute==='/shopcart'" :shopCart="shopCart"></computed>
+    <computed v-show="pageRoute==='/shopcart'"></computed>
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
   },
   data() {
     return {
-      shopCart: this.$store.state.shopcart
+      
     }
   },
   methods: {
