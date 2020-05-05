@@ -18,7 +18,7 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)//解决移动端300毫秒延迟
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.$axios = axios
-
+Vue.prototype.$bus = new Vue()
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

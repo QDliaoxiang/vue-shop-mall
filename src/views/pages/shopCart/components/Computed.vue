@@ -14,12 +14,24 @@ export default {
   data() {
     return {
       totalPrices: this.$store.state.totalPrice,
-      total: 0
+      total: 0,
+      cartList: this.$store.state.shopcart  //购物车中的商品
     }
   },
   methods: {
     handleChange(e) {
-      console.log(e.target.checked)
+      let bool = e.target.checked
+      if(bool){
+        this.$bus.$emit("checked")
+        for(let i = 0; i < this.cartList.length; i++){
+          this.$store.commit("handleChangeTotalPrice", this.cartList[i])
+        }
+      }else{
+        this.$bus.$emit("cancel")
+        for(let j = 0; j < this.cartList.length; j++){
+          this.$store.commit("handleChangeTotalPrice", this.cartList[j].id)
+        }
+      }
     }
   },
   computed: {

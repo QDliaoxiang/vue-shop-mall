@@ -39,6 +39,19 @@ export default {
       }
     }
   },
+  mounted() {
+    let iptbox = document.querySelectorAll("input")
+    this.$bus.$on("checked", function(){
+      for(let i = 0; i < iptbox.length; i++){
+        iptbox[i].checked = true
+      }
+    })
+    this.$bus.$on("cancel", function(){
+      for(let i = 0; i < iptbox.length; i++){
+        iptbox[i].checked = false
+      }
+    })
+  },
   beforeDestroy() {
     //离开购物车取消勾选
     this.$store.commit("handleChangeTotalPrice", this.item.id)

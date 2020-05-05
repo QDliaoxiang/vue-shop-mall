@@ -56,6 +56,7 @@ export default {
     //将当前正在查看的商品加入购物车
     handleAdd() {
       this.$store.commit("handleAddProdct")
+      console.log("添加成功")
     }
   },
   computed: {
