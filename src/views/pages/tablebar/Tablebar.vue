@@ -7,7 +7,7 @@
         </div>
         <span>首页</span>
       </li>
-      <li class="item">
+      <li class="item" @click="handleRoute('/category')">
         <div>
           <i class="iconfont iconimage"></i>
         </div>
@@ -67,7 +67,7 @@ export default {
     //判断显示tablebar的情况
     showTableBar() {
       let path = this.pageRoute
-      if(path === '/' || path === '/personal'){
+      if(path === '/' || path === '/personal' || path == '/category'){
         return true
       }else{
         return false

@@ -13,6 +13,9 @@ import "../src/assets/styles/border.css"
 import "./assets/iconfont/iconfont.css"
 import 'swiper/dist/css/swiper.css'
 
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)//解决移动端300毫秒延迟
