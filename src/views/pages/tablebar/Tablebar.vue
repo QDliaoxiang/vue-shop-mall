@@ -34,7 +34,8 @@
 </template>
 
 <script>
-import Computed from "../shopCart/components/Computed"
+import Computed from "../shopCart/components/Computed";
+import { Dialog } from 'vant';
 export default {
   name: 'Tablebar',
   components: {
@@ -56,7 +57,12 @@ export default {
     //将当前正在查看的商品加入购物车
     handleAdd() {
       this.$store.commit("handleAddProdct")
-      console.log("添加成功")
+      Dialog.alert({
+        message: '添加成功',
+      }).then(() => {
+       
+      });
+      
     }
   },
   computed: {

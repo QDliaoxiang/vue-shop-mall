@@ -2,26 +2,37 @@
   <div class="wrap">
     <div class="left-box">
       <ul>
-        <li v-for="item in cateList" :key="item.id">{{item.title}}</li>
+        <li v-for="(item, index) in cateList" @click="handleChange(index)" :key="item.id">{{item.title}}</li>
       </ul>
     </div>
+    <cate-list :list="defaultItems" :header="defaulTitle"></cate-list>
   </div>
 </template>
 
 <script>
+import CateList from "../../../components/CateList"
 export default {
   name: "CateGory",
+  components: {
+    CateList,
+  },
   data() {
     return {
-      cateList: []
+      cateList: [],
+      defaultItems: [],
+      defaulTitle: "",
     };
   },
   methods: {
     getCategoryList(){
       this.$axios.get('http://47.102.223.148:3001/cate/list').then(res => {
         this.cateList = res.data.cate
-        console.log(this.cateList)
+        this.defaultItems = res.data.cate[0].content
+        this.defaulTitle = res.data.cate[0].header
       })
+    },
+    handleChange(index) {
+      this.defaultItems = this.cateList[index].content
     }
   },
   created() {
@@ -37,9 +48,9 @@ export default {
     left: 0;
     top: 0;
     width: 1.6rem;
-    height: 100%;
-    background: #c9c9c9;
-    border: 1px solid #c9c9c9;
+    height: 98%;
+    background: #fafafa;
+    border: 1px solid #ddd;
     ul li 
       width: 100%;
       height: .5rem;
